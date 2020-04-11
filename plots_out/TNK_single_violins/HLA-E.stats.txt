@@ -1,0 +1,23 @@
+Stat report for HLA-E 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.577 0.359  6365 0.00451    0.568    0.586
+2 Naive/Mem T not ref-like 0.501 0.242 11817 0.00223    0.496    0.505
+3 Tc/NK ref-like           0.791 0.228  5521 0.00306    0.785    0.797
+4 Tc/NK not ref-like       0.708 0.259  7839 0.00293    0.703    0.714
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 45855431, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 26032634, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

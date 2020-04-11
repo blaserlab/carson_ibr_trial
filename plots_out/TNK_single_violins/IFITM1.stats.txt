@@ -1,0 +1,23 @@
+Stat report for IFITM1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.528 0.439  6365 0.00550    0.517    0.539
+2 Naive/Mem T not ref-like 0.692 0.278 11817 0.00256    0.687    0.697
+3 Tc/NK ref-like           0.992 0.261  5521 0.00352    0.986    0.999
+4 Tc/NK not ref-like       0.744 0.320  7839 0.00362    0.737    0.751
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 31115970, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 31589585, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

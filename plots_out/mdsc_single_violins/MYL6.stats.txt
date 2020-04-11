@@ -1,0 +1,14 @@
+Stat report for MYL6 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.715 0.307  1634 0.00759    0.700    0.730
+2 1_plus1   0.780 0.248  2473 0.00499    0.771    0.790
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1764478, p-value = 5.861e-12
+alternative hypothesis: true location shift is not equal to 0
+

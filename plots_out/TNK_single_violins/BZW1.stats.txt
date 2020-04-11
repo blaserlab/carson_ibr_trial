@@ -1,0 +1,23 @@
+Stat report for BZW1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.156 0.256  6365 0.00321    0.150    0.163
+2 Naive/Mem T not ref-like 0.172 0.181 11817 0.00167    0.168    0.175
+3 Tc/NK ref-like           0.236 0.219  5521 0.00295    0.230    0.241
+4 Tc/NK not ref-like       0.374 0.270  7839 0.00305    0.368    0.380
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 32350922, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 14869227, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

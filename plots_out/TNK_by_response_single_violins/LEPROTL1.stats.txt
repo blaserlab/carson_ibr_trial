@@ -1,0 +1,23 @@
+Stat report for LEPROTL1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.391 0.276 11690 0.00255    0.386    0.396
+2 Naive/MemT_responder     0.378 0.280  6492 0.00347    0.372    0.385
+3 Tc/NK_non-responder      0.262 0.252  5407 0.00343    0.255    0.269
+4 Tc/NK_responder          0.290 0.252  7953 0.00283    0.285    0.296
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 36694181, p-value = 0.000202
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 22745250, p-value = 5.163e-09
+alternative hypothesis: true location shift is not equal to 0
+

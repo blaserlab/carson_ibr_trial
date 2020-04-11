@@ -1,0 +1,23 @@
+Stat report for ZFP36L2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.832 0.381 11690 0.00352    0.825    0.839
+2 Naive/MemT_responder     0.742 0.362  6492 0.00449    0.733    0.751
+3 Tc/NK_non-responder      0.614 0.323  5407 0.00439    0.606    0.623
+4 Tc/NK_responder          0.604 0.325  7953 0.00365    0.596    0.611
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 32095068, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21160271, p-value = 0.1192
+alternative hypothesis: true location shift is not equal to 0
+

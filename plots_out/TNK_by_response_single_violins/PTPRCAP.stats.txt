@@ -1,0 +1,23 @@
+Stat report for PTPRCAP 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.292 0.250 11690 0.00231    0.287    0.296
+2 Naive/MemT_responder     0.324 0.259  6492 0.00321    0.318    0.330
+3 Tc/NK_non-responder      0.476 0.268  5407 0.00364    0.469    0.483
+4 Tc/NK_responder          0.432 0.268  7953 0.00301    0.426    0.438
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 40707511, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 19485757, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

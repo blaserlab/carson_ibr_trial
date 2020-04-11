@@ -1,0 +1,23 @@
+Stat report for CD74 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.269 0.279 11690 0.00258    0.264    0.274
+2 Naive/MemT_responder     0.285 0.277  6492 0.00344    0.279    0.292
+3 Tc/NK_non-responder      0.607 0.354  5407 0.00481    0.598    0.617
+4 Tc/NK_responder          0.506 0.322  7953 0.00361    0.499    0.513
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 39419388, p-value = 7.885e-06
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 17919214, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,14 @@
+Stat report for B2M 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7   1.05 0.334  1634 0.00827     1.03     1.06
+2 1_plus1    1.11 0.279  2473 0.00560     1.10     1.12
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1816608, p-value = 4.241e-08
+alternative hypothesis: true location shift is not equal to 0
+

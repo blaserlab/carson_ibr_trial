@@ -1,0 +1,23 @@
+Stat report for PFN1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.425 0.302 11690 0.00279    0.420    0.431
+2 Naive/MemT_responder     0.489 0.327  6492 0.00406    0.481    0.497
+3 Tc/NK_non-responder      0.806 0.359  5407 0.00488    0.797    0.816
+4 Tc/NK_responder          0.797 0.311  7953 0.00349    0.790    0.804
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 42671582, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21243309, p-value = 0.239
+alternative hypothesis: true location shift is not equal to 0
+

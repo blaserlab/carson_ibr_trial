@@ -1,0 +1,23 @@
+Stat report for COX7C 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.272 0.304  6365 0.00382    0.265    0.280
+2 Naive/Mem T not ref-like 0.477 0.216 11817 0.00198    0.473    0.481
+3 Tc/NK ref-like           0.398 0.230  5521 0.00310    0.392    0.404
+4 Tc/NK not ref-like       0.338 0.256  7839 0.00289    0.332    0.344
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 24033618, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 24342719, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

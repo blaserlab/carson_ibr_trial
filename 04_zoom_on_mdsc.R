@@ -77,7 +77,56 @@ mdsc_varplots<-lapply(X = seq_along(titles), FUN = custom_variable_plot,
 
 # are there any before/after gene expression changes?
 
-TM_mdsc_cycle_day<-top_markers(cds_mdsc_noref, group_cells_by = "cycle_day", reference_cells = 1000, genes_to_test_per_group = 50, cores = 39)
+TM_mdsc_cycle_day <-
+  top_markers(
+    cds_mdsc_noref,
+    group_cells_by = "cycle_day",
+    reference_cells = 1000,
+    genes_to_test_per_group = 50,
+    cores = 39
+  )
+
+tbl_df(TM_mdsc_cycle_day) %>% arrange(cell_group) %>% write_csv("data_out/TM_mdsc_cycle_day.csv") %>% View()
+
+#make a series of violin plots for all of these genes
+TM_sig_genes<-TM_mdsc_cycle_day %>% filter(marker_test_q_value<0.05) %>% pull(gene_short_name) %>% unique()
+
+for (i in 1:length(TM_sig_genes)) {
+  cvp<-custom_violin_plot(
+    cds = cds_mdsc_noref,
+    variable = "cycle_day",
+    genes_to_plot = TM_sig_genes[i],
+    outfile = paste0("plots_out/mdsc_single_violins/", TM_sig_genes[i], ".pdf"),
+    include_jitter = F,
+    plot_title = NULL,
+    w = 1.75,
+    h = 2.5,
+    comparison_list = list(c("1_minus7", "1_plus1")),
+    legend_pos = "none"
+  )
+  
+  mdsc_one_minus_seven <-
+    cvp[["data"]] %>% 
+    filter(cycle_day == "1_minus7") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  mdsc_one_plus_one<-
+    cvp[["data"]] %>% 
+    filter(cycle_day == "1_plus1") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  sink(paste0("plots_out/mdsc_single_violins/",TM_sig_genes[i],".stats.txt"))
+  cat(paste0("Stat report for ",TM_sig_genes[i]),"\n\n")
+  print(cvp[["data"]] %>% 
+          tbl_df() %>% 
+          group_by(cycle_day) %>% 
+          summarise(mean = mean(log10(expression+1), na.rm = TRUE),sd = sd(log10(expression+1), na.rm = TRUE),count = n()) %>%
+          mutate(se = sd / sqrt(count),lower.ci = mean - qt(1 - (0.05 / 2), count - 1) * se, upper.ci = mean + qt(1 - (0.05 / 2), count- 1) * se))
+  
+  print(wilcox.test(mdsc_one_minus_seven,mdsc_one_plus_one))
+  sink()
+}
+
 
 # custom violin plots
 

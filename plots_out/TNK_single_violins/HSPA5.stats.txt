@@ -1,0 +1,23 @@
+Stat report for HSPA5 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.282 0.367  6365 0.00459    0.273    0.291
+2 Naive/Mem T not ref-like 0.272 0.227 11817 0.00209    0.268    0.277
+3 Tc/NK ref-like           0.361 0.263  5521 0.00354    0.354    0.368
+4 Tc/NK not ref-like       0.502 0.319  7839 0.00360    0.495    0.509
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 34011609, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 15841892, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

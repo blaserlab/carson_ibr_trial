@@ -1,0 +1,23 @@
+Stat report for TMSB10 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.855 0.389 11690 0.00360    0.848    0.862
+2 Naive/MemT_responder     0.846 0.413  6492 0.00512    0.836    0.856
+3 Tc/NK_non-responder      1.09  0.310  5407 0.00421    1.08     1.10 
+4 Tc/NK_responder          0.976 0.331  7953 0.00371    0.969    0.983
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 38457407, p-value = 0.1311
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 16850897, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

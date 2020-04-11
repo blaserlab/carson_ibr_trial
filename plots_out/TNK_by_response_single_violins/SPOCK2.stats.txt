@@ -1,0 +1,23 @@
+Stat report for SPOCK2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.372 0.298 11690 0.00276    0.366    0.377
+2 Naive/MemT_responder     0.342 0.302  6492 0.00375    0.334    0.349
+3 Tc/NK_non-responder      0.279 0.283  5407 0.00385    0.271    0.286
+4 Tc/NK_responder          0.251 0.271  7953 0.00304    0.245    0.257
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 35300182, p-value = 3.384e-15
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 20285956, p-value = 5.79e-09
+alternative hypothesis: true location shift is not equal to 0
+

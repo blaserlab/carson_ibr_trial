@@ -1,0 +1,23 @@
+Stat report for REEP5 
+
+# A tibble: 4 x 7
+  recluster                  mean    sd count      se lower.ci upper.ci
+  <fct>                     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.109  0.221  6365 0.00277   0.103     0.114
+2 Naive/Mem T not ref-like 0.0979 0.149 11817 0.00137   0.0952    0.101
+3 Tc/NK ref-like           0.101  0.163  5521 0.00219   0.0965    0.105
+4 Tc/NK not ref-like       0.266  0.247  7839 0.00279   0.261     0.272
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 34776237, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 13313542, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,14 @@
+Stat report for TYROBP 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.950 0.344  1634 0.00852    0.934    0.967
+2 1_plus1   1.04  0.271  2473 0.00545    1.03     1.05 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1710244, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

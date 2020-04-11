@@ -1,0 +1,23 @@
+Stat report for MT-CO2 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like      1.70 0.347  6365 0.00435     1.69     1.71
+2 Naive/Mem T not ref-like  1.36 0.205 11817 0.00188     1.35     1.36
+3 Tc/NK ref-like            1.42 0.183  5521 0.00246     1.41     1.42
+4 Tc/NK not ref-like        1.46 0.220  7839 0.00249     1.46     1.47
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 59073236, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 19383315, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

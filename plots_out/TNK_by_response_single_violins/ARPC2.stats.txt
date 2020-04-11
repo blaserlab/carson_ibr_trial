@@ -1,0 +1,23 @@
+Stat report for ARPC2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.294 0.255 11690 0.00236    0.290    0.299
+2 Naive/MemT_responder     0.330 0.253  6492 0.00314    0.324    0.337
+3 Tc/NK_non-responder      0.552 0.261  5407 0.00355    0.545    0.559
+4 Tc/NK_responder          0.521 0.255  7953 0.00286    0.516    0.527
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 41312438, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 19827566, p-value = 1.98e-14
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,23 @@
+Stat report for ANKRD12 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.350 0.358  6365 0.00449    0.341    0.359
+2 Naive/Mem T not ref-like 0.270 0.222 11817 0.00204    0.266    0.274
+3 Tc/NK ref-like           0.161 0.198  5521 0.00266    0.156    0.167
+4 Tc/NK not ref-like       0.236 0.247  7839 0.00278    0.230    0.241
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 40518954, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 18044184, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

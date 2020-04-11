@@ -1,0 +1,23 @@
+Stat report for CYBA 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.223 0.279  6365 0.00350    0.216    0.230
+2 Naive/Mem T not ref-like 0.195 0.202 11817 0.00186    0.192    0.199
+3 Tc/NK ref-like           0.648 0.285  5521 0.00383    0.641    0.656
+4 Tc/NK not ref-like       0.285 0.263  7839 0.00297    0.279    0.291
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 37535056, p-value = 0.8205
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 35554020, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

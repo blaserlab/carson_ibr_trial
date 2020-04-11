@@ -1,0 +1,23 @@
+Stat report for PPIA 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.280 0.308  6365 0.00387    0.272    0.287
+2 Naive/Mem T not ref-like 0.435 0.220 11817 0.00202    0.431    0.439
+3 Tc/NK ref-like           0.593 0.239  5521 0.00322    0.587    0.599
+4 Tc/NK not ref-like       0.415 0.264  7839 0.00298    0.409    0.421
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 27022378, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 30098350, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

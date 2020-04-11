@@ -1,0 +1,23 @@
+Stat report for MT-ATP8 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.990 0.358 11690 0.00331    0.984    0.997
+2 Naive/MemT_responder     0.949 0.354  6492 0.00439    0.940    0.957
+3 Tc/NK_non-responder      0.852 0.291  5407 0.00396    0.844    0.860
+4 Tc/NK_responder          0.885 0.285  7953 0.00319    0.879    0.891
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 35014982, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 22951316, p-value = 3.392e-11
+alternative hypothesis: true location shift is not equal to 0
+

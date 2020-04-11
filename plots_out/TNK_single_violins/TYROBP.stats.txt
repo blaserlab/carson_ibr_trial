@@ -1,0 +1,23 @@
+Stat report for TYROBP 
+
+# A tibble: 4 x 7
+  recluster                   mean     sd count       se lower.ci upper.ci
+  <fct>                      <dbl>  <dbl> <int>    <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.0367  0.158   6365 0.00198   0.0328   0.0406 
+2 Naive/Mem T not ref-like 0.00579 0.0439 11817 0.000404  0.00500  0.00658
+3 Tc/NK ref-like           0.501   0.379   5521 0.00510   0.491    0.511  
+4 Tc/NK not ref-like       0.263   0.310   7839 0.00351   0.256    0.270  
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 39078544, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 29492564, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

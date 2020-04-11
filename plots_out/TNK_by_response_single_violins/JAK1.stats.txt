@@ -1,0 +1,23 @@
+Stat report for JAK1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.223 0.244 11690 0.00226    0.219    0.228
+2 Naive/MemT_responder     0.240 0.243  6492 0.00301    0.234    0.246
+3 Tc/NK_non-responder      0.324 0.265  5407 0.00360    0.317    0.331
+4 Tc/NK_responder          0.381 0.267  7953 0.00299    0.375    0.387
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 39679428, p-value = 1.125e-07
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 24033605, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

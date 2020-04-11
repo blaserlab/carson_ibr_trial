@@ -1,0 +1,14 @@
+Stat report for CTSS 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.696 0.337  1634 0.00834    0.680    0.713
+2 1_plus1   0.774 0.278  2473 0.00559    0.763    0.785
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1776074, p-value = 4.96e-11
+alternative hypothesis: true location shift is not equal to 0
+

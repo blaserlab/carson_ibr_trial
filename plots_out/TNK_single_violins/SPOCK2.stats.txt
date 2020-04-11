@@ -1,0 +1,23 @@
+Stat report for SPOCK2 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.400 0.383  6365 0.00480    0.391    0.410
+2 Naive/Mem T not ref-like 0.340 0.241 11817 0.00221    0.335    0.344
+3 Tc/NK ref-like           0.162 0.209  5521 0.00281    0.157    0.168
+4 Tc/NK not ref-like       0.333 0.296  7839 0.00334    0.326    0.340
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 39485254, p-value = 1.967e-08
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 14445458, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

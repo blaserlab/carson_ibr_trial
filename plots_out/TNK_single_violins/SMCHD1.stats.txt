@@ -1,0 +1,23 @@
+Stat report for SMCHD1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.245 0.310  6365 0.00389    0.238    0.253
+2 Naive/Mem T not ref-like 0.144 0.182 11817 0.00167    0.141    0.147
+3 Tc/NK ref-like           0.121 0.172  5521 0.00231    0.117    0.126
+4 Tc/NK not ref-like       0.115 0.192  7839 0.00217    0.110    0.119
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 42016543, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 22545074, p-value = 7.358e-07
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,23 @@
+Stat report for MYL12A 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.273 0.261 11690 0.00241    0.268    0.278
+2 Naive/MemT_responder     0.330 0.274  6492 0.00340    0.323    0.337
+3 Tc/NK_non-responder      0.503 0.301  5407 0.00409    0.495    0.511
+4 Tc/NK_responder          0.500 0.277  7953 0.00311    0.494    0.507
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 42579175, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21349974, p-value = 0.4894
+alternative hypothesis: true location shift is not equal to 0
+

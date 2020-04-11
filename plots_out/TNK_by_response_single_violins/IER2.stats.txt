@@ -1,0 +1,23 @@
+Stat report for IER2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.190 0.238 11690 0.00220    0.185    0.194
+2 Naive/MemT_responder     0.224 0.251  6492 0.00311    0.218    0.230
+3 Tc/NK_non-responder      0.349 0.274  5407 0.00372    0.342    0.357
+4 Tc/NK_responder          0.388 0.272  7953 0.00305    0.382    0.394
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 40890038, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 23244998, p-value = 9.004e-16
+alternative hypothesis: true location shift is not equal to 0
+

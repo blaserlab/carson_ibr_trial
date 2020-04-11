@@ -1,0 +1,23 @@
+Stat report for PIK3IP1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.286 0.265 11690 0.00245    0.281    0.291
+2 Naive/MemT_responder     0.299 0.267  6492 0.00331    0.293    0.306
+3 Tc/NK_non-responder      0.148 0.205  5407 0.00279    0.143    0.154
+4 Tc/NK_responder          0.183 0.221  7953 0.00247    0.178    0.188
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 39006024, p-value = 0.00146
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 23267533, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

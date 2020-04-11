@@ -1,0 +1,23 @@
+Stat report for GZMM 
+
+# A tibble: 4 x 7
+  recluster                  mean    sd count      se lower.ci upper.ci
+  <fct>                     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.0896 0.192  6365 0.00241   0.0849   0.0944
+2 Naive/Mem T not ref-like 0.0929 0.145 11817 0.00133   0.0903   0.0955
+3 Tc/NK ref-like           0.424  0.256  5521 0.00345   0.417    0.431 
+4 Tc/NK not ref-like       0.318  0.256  7839 0.00289   0.312    0.324 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 34302082, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 26526254, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

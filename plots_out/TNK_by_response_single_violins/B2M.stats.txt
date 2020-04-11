@@ -1,0 +1,23 @@
+Stat report for B2M 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder  1.41 0.357 11690 0.00330     1.40     1.42
+2 Naive/MemT_responder      1.43 0.330  6492 0.00410     1.42     1.44
+3 Tc/NK_non-responder       1.70 0.205  5407 0.00279     1.70     1.71
+4 Tc/NK_responder           1.64 0.176  7953 0.00197     1.64     1.65
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 39162990, p-value = 0.0003312
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 17426092, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

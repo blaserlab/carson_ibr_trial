@@ -1,0 +1,23 @@
+Stat report for LDHB 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.392 0.274 11690 0.00254    0.387    0.397
+2 Naive/MemT_responder     0.367 0.263  6492 0.00327    0.361    0.373
+3 Tc/NK_non-responder      0.204 0.219  5407 0.00297    0.198    0.210
+4 Tc/NK_responder          0.191 0.210  7953 0.00235    0.186    0.196
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 35855035, p-value = 4.857e-10
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 20824673, p-value = 0.0009827
+alternative hypothesis: true location shift is not equal to 0
+

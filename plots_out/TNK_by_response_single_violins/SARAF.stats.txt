@@ -1,0 +1,23 @@
+Stat report for SARAF 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.775 0.306 11690 0.00283    0.770    0.781
+2 Naive/MemT_responder     0.756 0.300  6492 0.00372    0.748    0.763
+3 Tc/NK_non-responder      0.574 0.283  5407 0.00384    0.567    0.582
+4 Tc/NK_responder          0.574 0.265  7953 0.00297    0.568    0.579
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 35365865, p-value = 2.747e-14
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21178886, p-value = 0.1409
+alternative hypothesis: true location shift is not equal to 0
+

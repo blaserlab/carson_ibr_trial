@@ -1,0 +1,23 @@
+Stat report for SRGN 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.405 0.338 11690 0.00313    0.399    0.411
+2 Naive/MemT_responder     0.357 0.314  6492 0.00390    0.349    0.364
+3 Tc/NK_non-responder      0.618 0.274  5407 0.00372    0.611    0.625
+4 Tc/NK_responder          0.589 0.269  7953 0.00301    0.583    0.594
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 34650576, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 19943078, p-value = 1.066e-12
+alternative hypothesis: true location shift is not equal to 0
+

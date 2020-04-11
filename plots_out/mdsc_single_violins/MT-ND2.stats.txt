@@ -1,0 +1,14 @@
+Stat report for MT-ND2 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.945 0.358  1634 0.00885    0.928    0.962
+2 1_plus1   0.863 0.282  2473 0.00568    0.852    0.874
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 2324966, p-value = 2.66e-16
+alternative hypothesis: true location shift is not equal to 0
+

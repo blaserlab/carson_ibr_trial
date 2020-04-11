@@ -1,0 +1,23 @@
+Stat report for IFITM2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.203 0.242 11690 0.00224    0.199    0.207
+2 Naive/MemT_responder     0.248 0.250  6492 0.00310    0.241    0.254
+3 Tc/NK_non-responder      0.450 0.375  5407 0.00510    0.440    0.460
+4 Tc/NK_responder          0.453 0.325  7953 0.00365    0.446    0.460
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 41896364, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21816957, p-value = 0.1448
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,23 @@
+Stat report for MT-ATP8 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     1.20  0.400  6365 0.00501    1.19     1.21 
+2 Naive/Mem T not ref-like 0.857 0.265 11817 0.00244    0.852    0.862
+3 Tc/NK ref-like           0.824 0.269  5521 0.00362    0.817    0.831
+4 Tc/NK not ref-like       0.906 0.296  7839 0.00334    0.899    0.912
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 56501382, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 18129938, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,23 @@
+Stat report for HLA-E 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.524 0.296 11690 0.00274    0.519    0.529
+2 Naive/MemT_responder     0.533 0.281  6492 0.00349    0.526    0.540
+3 Tc/NK_non-responder      0.768 0.251  5407 0.00341    0.761    0.774
+4 Tc/NK_responder          0.725 0.248  7953 0.00278    0.720    0.731
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 38646962, p-value = 0.03846
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 19152620, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

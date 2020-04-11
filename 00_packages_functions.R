@@ -317,7 +317,7 @@ custom_violin_plot <-
         x = !!as.name(variable),
         y = log10(expression +
                     pseudocount)
-      )) #expression already normalized when data extracted by violin plot function
+      )) #expression already normalized by size factor when data extracted by violin plot function
     p1 <- p1 +
       geom_violin(
         scale = "width",

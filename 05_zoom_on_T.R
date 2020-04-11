@@ -136,7 +136,7 @@ TNK_recluster <-
 # now remove the ref andfind the top markers
 cds_TNK_nosenes_noref<-cds_TNK_nosenes[,colData(cds_TNK_nosenes)$patient != "ref"]
 TM_TNK_reclust<-top_markers(cds_TNK_nosenes_noref,group_cells_by = "recluster", genes_to_test_per_group = 50,reference_cells = 1000,cores = 39)
-TM_TNK_reclust %>% write_csv("data_out/TM_TNK_reclust.csv")
+tbl_df(TM_TNK_reclust) %>% arrange(cell_group) %>% write_csv("data_out/TM_TNK_reclust.csv") %>% View()
 
 # now plot some
 TNK_reclust_genes<-TM_TNK_reclust %>%
@@ -161,5 +161,135 @@ TNK_violin<-custom_violin_plot(
 
 )
 
+# now plot all of the genes singly
+
+TNK_reclust_allgenes<-TM_TNK_reclust %>% filter(marker_test_q_value<0.05) %>% pull(gene_short_name) %>% unique()
+
+for (i in 1:length(TNK_reclust_allgenes)) {
+  cvp<-custom_violin_plot(
+    cds = cds_TNK_nosenes_noref,
+    variable = "recluster",
+    genes_to_plot = TNK_reclust_allgenes[i],
+    outfile = paste0("plots_out/TNK_single_violins/", TNK_reclust_allgenes[i], ".pdf"),
+    include_jitter = F,
+    plot_title = NULL,
+    w = 3,
+    h = 4,
+    comparison_list = list(c("Naive/Mem T ref-like","Naive/Mem T not ref-like"),c("Tc/NK ref-like","Tc/NK not ref-like")),
+    legend_pos = "none",
+    xangle = 90
+  )
+  
+  NMT_reflike <-
+    cvp[["data"]] %>% 
+    filter(recluster == "Naive/Mem T ref-like") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  NMT_notreflike<-
+    cvp[["data"]] %>% 
+    filter(recluster == "Naive/Mem T not ref-like") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  TCNK_reflike <-
+    cvp[["data"]] %>% 
+    filter(recluster == "Tc/NK ref-like") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  TCNK_notreflike<-
+    cvp[["data"]] %>% 
+    filter(recluster == "Tc/NK not ref-like") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+    
+  sink(paste0("plots_out/TNK_single_violins/",TNK_reclust_allgenes[i],".stats.txt"))
+  cat(paste0("Stat report for ",TNK_reclust_allgenes[i]),"\n\n")
+  print(cvp[["data"]] %>% 
+    tbl_df() %>% 
+    group_by(recluster) %>% 
+    summarise(mean = mean(log10(expression+1), na.rm = TRUE),sd = sd(log10(expression+1), na.rm = TRUE),count = n()) %>%
+    mutate(se = sd / sqrt(count),lower.ci = mean - qt(1 - (0.05 / 2), count - 1) * se, upper.ci = mean + qt(1 - (0.05 / 2), count- 1) * se))
+  
+  print(wilcox.test(NMT_reflike,NMT_notreflike))
+  print(wilcox.test(TCNK_reflike,TCNK_notreflike))
+  sink()
+}
+  
+# group all T cells by response
+colData(cds_TNK_nosenes_noref)$pa_response_trinary<-paste0(colData(cds_TNK_nosenes_noref)$partition_assignment,"_",colData(cds_TNK_nosenes_noref)$response_trinary)
+
+TNK_by_response <-
+  custom_variable_plot(
+    cds = cds_TNK_nosenes_noref,
+    var = "pa_response_trinary",
+    foreground_alpha = 0.2,
+    legend_pos = "right",
+    outfile = "plots_out/TNK_by_response.pdf",
+    palette_viridis = F,
+    h = 4,
+    w = 6
+  )
+
+# find top markers
+TM_TNK_by_response <-
+  top_markers(
+    cds = cds_TNK_nosenes_noref,
+    group_cells_by = "pa_response_trinary",
+    reference_cells = 1000,
+    cores = 39,
+    genes_to_test_per_group = 50,
+    verbose = T
+  )
+tbl_df(TM_TNK_by_response) %>% arrange(cell_group) %>% write_csv("data_out/TM_TNK_by_response.csv") %>% View()
+
+TM_TNK_by_respons_sig<-TM_TNK_by_response %>% filter(marker_test_q_value<0.05) %>% pull(gene_short_name) %>% unique()
+
+for (i in 1:length(TM_TNK_by_respons_sig)) {
+  cvp<-custom_violin_plot(
+    cds = cds_TNK_nosenes_noref,
+    variable = "pa_response_trinary",
+    genes_to_plot = TM_TNK_by_respons_sig[i],
+    outfile = paste0("plots_out/TNK_by_response_single_violins/", TM_TNK_by_respons_sig[i], ".pdf"),
+    include_jitter = F,
+    plot_title = NULL,
+    w = 3,
+    h = 4,
+    comparison_list = list(c("Naive/MemT_responder","Naive/MemT_non-responder"),c("Tc/NK_responder","Tc/NK_non-responder")),
+    legend_pos = "none",
+    xangle = 90
+  )
+  
+  NMT_responder <-
+    cvp[["data"]] %>% 
+    filter(pa_response_trinary == "Naive/MemT_responder") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  NMT_nonresponder<-
+    cvp[["data"]] %>% 
+    filter(pa_response_trinary == "Naive/MemT_non-responder") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  TCNK_responder <-
+    cvp[["data"]] %>% 
+    filter(pa_response_trinary == "Tc/NK_responder") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  TCNK_nonresponder<-
+    cvp[["data"]] %>% 
+    filter(pa_response_trinary == "Tc/NK_non-responder") %>% 
+    mutate(log10expr_p1 = log10(expression +1)) %>% 
+    pull(log10expr_p1)
+  
+  sink(paste0("plots_out/TNK_by_response_single_violins/",TM_TNK_by_respons_sig[i],".stats.txt"))
+  cat(paste0("Stat report for ",TM_TNK_by_respons_sig[i]),"\n\n")
+  print(cvp[["data"]] %>% 
+          tbl_df() %>% 
+          group_by(pa_response_trinary) %>% 
+          summarise(mean = mean(log10(expression+1), na.rm = TRUE),sd = sd(log10(expression+1), na.rm = TRUE),count = n()) %>%
+          mutate(se = sd / sqrt(count),lower.ci = mean - qt(1 - (0.05 / 2), count - 1) * se, upper.ci = mean + qt(1 - (0.05 / 2), count- 1) * se))
+  
+  print(wilcox.test(NMT_responder,NMT_nonresponder))
+  print(wilcox.test(TCNK_responder,TCNK_nonresponder))
+  sink()
+}
 
 save.image.pigz(file = "carson_brooke.RData", n.cores = 39)

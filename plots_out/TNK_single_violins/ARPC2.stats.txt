@@ -1,0 +1,23 @@
+Stat report for ARPC2 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.347 0.320  6365 0.00401    0.339    0.355
+2 Naive/Mem T not ref-like 0.286 0.208 11817 0.00192    0.282    0.289
+3 Tc/NK ref-like           0.574 0.247  5521 0.00332    0.568    0.581
+4 Tc/NK not ref-like       0.505 0.261  7839 0.00295    0.499    0.511
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 41537308, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 24963980, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

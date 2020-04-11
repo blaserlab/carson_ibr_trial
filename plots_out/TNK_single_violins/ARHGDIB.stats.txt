@@ -1,0 +1,23 @@
+Stat report for ARHGDIB 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.403 0.344  6365 0.00431    0.394    0.411
+2 Naive/Mem T not ref-like 0.483 0.226 11817 0.00208    0.479    0.487
+3 Tc/NK ref-like           0.690 0.234  5521 0.00315    0.684    0.696
+4 Tc/NK not ref-like       0.525 0.267  7839 0.00301    0.519    0.531
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 34561207, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 29751260, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

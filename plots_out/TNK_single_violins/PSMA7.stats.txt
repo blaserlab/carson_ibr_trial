@@ -1,0 +1,23 @@
+Stat report for PSMA7 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.141 0.234  6365 0.00293    0.135    0.147
+2 Naive/Mem T not ref-like 0.155 0.173 11817 0.00160    0.152    0.158
+3 Tc/NK ref-like           0.208 0.210  5521 0.00283    0.202    0.213
+4 Tc/NK not ref-like       0.317 0.255  7839 0.00288    0.312    0.323
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 32847762, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 15948916, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

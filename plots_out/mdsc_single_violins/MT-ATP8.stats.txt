@@ -1,0 +1,14 @@
+Stat report for MT-ATP8 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.509 0.482  1634 0.0119     0.486    0.532
+2 1_plus1   0.357 0.339  2473 0.00682    0.343    0.370
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 2423727, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

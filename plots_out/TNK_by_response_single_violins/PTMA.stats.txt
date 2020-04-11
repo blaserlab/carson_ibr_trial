@@ -1,0 +1,23 @@
+Stat report for PTMA 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.921 0.311 11690 0.00288    0.915    0.927
+2 Naive/MemT_responder     0.901 0.302  6492 0.00374    0.893    0.908
+3 Tc/NK_non-responder      1.09  0.238  5407 0.00324    1.09     1.10 
+4 Tc/NK_responder          1.10  0.232  7953 0.00261    1.10     1.11 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 35573610, p-value = 2.629e-12
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21494517, p-value = 0.9766
+alternative hypothesis: true location shift is not equal to 0
+

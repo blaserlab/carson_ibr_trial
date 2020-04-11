@@ -73,5 +73,15 @@ colData(cds_TNK)$barcode_pt_cycle_day<-paste0(colData(cds_TNK)$barcode, "_", col
 colData(cds_TNK)[, 16:19] <- 
   left_join(tbl_df(colData(cds_TNK)), tcr_cols_to_add) %>% select(clone_id_pt_barcode_day,raw_clonotype_id, frequency, cdr3s_aa)
 
+#calculate shannon diversity based on clone frequency
+clonotype_shannon<-tcr_data %>%
+  group_by(pt_cycle_day,raw_clonotype_id) %>%
+  summarise(count = unique(frequency)) %>%
+  mutate(shannon = sum(-1*(count/sum(count))*log((count/sum(count))))) %>%
+  select(pt_cycle_day,shannon) %>%
+  unique() %>%
+  write_csv("data_out/clonotype_shannon.csv")
+
+
 save.image.pigz(file = "carson_brooke.RData", n.cores = 39)
 

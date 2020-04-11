@@ -1,0 +1,23 @@
+Stat report for NOP53 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.459 0.276 11690 0.00256    0.454    0.464
+2 Naive/MemT_responder     0.430 0.268  6492 0.00332    0.423    0.436
+3 Tc/NK_non-responder      0.363 0.258  5407 0.00351    0.356    0.370
+4 Tc/NK_responder          0.372 0.245  7953 0.00274    0.367    0.377
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 35069438, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21820572, p-value = 0.1412
+alternative hypothesis: true location shift is not equal to 0
+

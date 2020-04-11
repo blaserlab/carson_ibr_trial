@@ -1,0 +1,23 @@
+Stat report for GSTK1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.311 0.256 11690 0.00237    0.306    0.315
+2 Naive/MemT_responder     0.340 0.263  6492 0.00327    0.334    0.347
+3 Tc/NK_non-responder      0.204 0.223  5407 0.00303    0.198    0.210
+4 Tc/NK_responder          0.193 0.214  7953 0.00240    0.188    0.198
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 40484205, p-value = 3.392e-14
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 20940794, p-value = 0.006276
+alternative hypothesis: true location shift is not equal to 0
+

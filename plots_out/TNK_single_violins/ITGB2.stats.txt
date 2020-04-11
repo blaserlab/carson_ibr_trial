@@ -1,0 +1,23 @@
+Stat report for ITGB2 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.198 0.271  6365 0.00339    0.191    0.205
+2 Naive/Mem T not ref-like 0.135 0.178 11817 0.00163    0.132    0.138
+3 Tc/NK ref-like           0.630 0.269  5521 0.00362    0.623    0.637
+4 Tc/NK not ref-like       0.428 0.305  7839 0.00345    0.421    0.435
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 40209121, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 29827635, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

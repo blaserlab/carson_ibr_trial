@@ -1,0 +1,23 @@
+Stat report for CD99 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.199 0.269  6365 0.00337    0.192    0.205
+2 Naive/Mem T not ref-like 0.288 0.222 11817 0.00205    0.284    0.292
+3 Tc/NK ref-like           0.533 0.256  5521 0.00344    0.527    0.540
+4 Tc/NK not ref-like       0.452 0.272  7839 0.00307    0.446    0.458
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 28754514, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 25220842, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,23 @@
+Stat report for LITAF 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.250 0.253 11690 0.00234    0.246    0.255
+2 Naive/MemT_responder     0.180 0.213  6492 0.00264    0.175    0.185
+3 Tc/NK_non-responder      0.475 0.271  5407 0.00369    0.468    0.482
+4 Tc/NK_responder          0.448 0.266  7953 0.00299    0.442    0.454
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 32334992, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 20163838, p-value = 9.092e-10
+alternative hypothesis: true location shift is not equal to 0
+

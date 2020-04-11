@@ -1,0 +1,23 @@
+Stat report for MT-ND1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     1.08  0.367  6365 0.00460    1.08     1.09 
+2 Naive/Mem T not ref-like 0.804 0.234 11817 0.00215    0.800    0.808
+3 Tc/NK ref-like           0.766 0.256  5521 0.00344    0.759    0.773
+4 Tc/NK not ref-like       0.809 0.258  7839 0.00292    0.803    0.815
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 55441164, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 19678208, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

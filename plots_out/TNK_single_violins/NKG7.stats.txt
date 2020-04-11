@@ -1,0 +1,23 @@
+Stat report for NKG7 
+
+# A tibble: 4 x 7
+  recluster                  mean    sd count      se lower.ci upper.ci
+  <fct>                     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.137  0.327  6365 0.00410   0.129    0.145 
+2 Naive/Mem T not ref-like 0.0569 0.154 11817 0.00142   0.0541   0.0597
+3 Tc/NK ref-like           1.23   0.280  5521 0.00378   1.23     1.24  
+4 Tc/NK not ref-like       1.03   0.348  7839 0.00393   1.02     1.03  
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 38745669, p-value = 2.757e-07
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 30188004, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

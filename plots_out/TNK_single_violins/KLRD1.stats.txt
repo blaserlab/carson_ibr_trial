@@ -1,0 +1,23 @@
+Stat report for KLRD1 
+
+# A tibble: 4 x 7
+  recluster                   mean     sd count       se lower.ci upper.ci
+  <fct>                      <dbl>  <dbl> <int>    <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.0155  0.0997  6365 0.00125   0.0130   0.0179 
+2 Naive/Mem T not ref-like 0.00323 0.0274 11817 0.000252  0.00273  0.00372
+3 Tc/NK ref-like           0.248   0.239   5521 0.00322   0.242    0.254  
+4 Tc/NK not ref-like       0.104   0.190   7839 0.00214   0.0998   0.108  
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 3.8e+07, p-value = 1.488e-06
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 28971618, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

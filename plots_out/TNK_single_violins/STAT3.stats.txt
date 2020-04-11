@@ -1,0 +1,23 @@
+Stat report for STAT3 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.248 0.309  6365 0.00388    0.240    0.256
+2 Naive/Mem T not ref-like 0.178 0.191 11817 0.00175    0.175    0.182
+3 Tc/NK ref-like           0.113 0.167  5521 0.00225    0.109    0.118
+4 Tc/NK not ref-like       0.149 0.212  7839 0.00239    0.144    0.154
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 39487683, p-value = 3.931e-09
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 20154685, p-value = 3.934e-15
+alternative hypothesis: true location shift is not equal to 0
+

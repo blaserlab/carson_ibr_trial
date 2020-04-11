@@ -1,0 +1,23 @@
+Stat report for SRSF5 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.302 0.250 11690 0.00232    0.297    0.306
+2 Naive/MemT_responder     0.298 0.250  6492 0.00310    0.292    0.304
+3 Tc/NK_non-responder      0.392 0.261  5407 0.00355    0.385    0.398
+4 Tc/NK_responder          0.424 0.255  7953 0.00286    0.418    0.430
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 37446206, p-value = 0.135
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 22945330, p-value = 3.465e-11
+alternative hypothesis: true location shift is not equal to 0
+

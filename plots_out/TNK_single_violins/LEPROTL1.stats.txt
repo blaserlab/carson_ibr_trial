@@ -1,0 +1,23 @@
+Stat report for LEPROTL1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.311 0.322  6365 0.00403    0.303    0.318
+2 Naive/Mem T not ref-like 0.427 0.240 11817 0.00221    0.423    0.432
+3 Tc/NK ref-like           0.190 0.206  5521 0.00277    0.185    0.196
+4 Tc/NK not ref-like       0.341 0.264  7839 0.00298    0.336    0.347
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 28818154, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 14226582, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

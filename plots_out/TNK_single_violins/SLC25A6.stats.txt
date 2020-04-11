@@ -1,0 +1,23 @@
+Stat report for SLC25A6 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.251 0.292  6365 0.00366    0.243    0.258
+2 Naive/Mem T not ref-like 0.471 0.232 11817 0.00213    0.467    0.476
+3 Tc/NK ref-like           0.380 0.242  5521 0.00325    0.373    0.386
+4 Tc/NK not ref-like       0.351 0.262  7839 0.00296    0.345    0.357
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 22179506, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 22716912, p-value = 7.408e-07
+alternative hypothesis: true location shift is not equal to 0
+

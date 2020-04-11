@@ -1,0 +1,23 @@
+Stat report for EEF1B2 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.490 0.424  6365 0.00532    0.480    0.500
+2 Naive/Mem T not ref-like 0.931 0.216 11817 0.00199    0.927    0.935
+3 Tc/NK ref-like           0.682 0.232  5521 0.00312    0.675    0.688
+4 Tc/NK not ref-like       0.647 0.291  7839 0.00329    0.640    0.653
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 14569274, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 22124117, p-value = 0.02724
+alternative hypothesis: true location shift is not equal to 0
+

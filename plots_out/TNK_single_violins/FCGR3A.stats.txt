@@ -1,0 +1,23 @@
+Stat report for FCGR3A 
+
+# A tibble: 4 x 7
+  recluster                   mean     sd count       se lower.ci upper.ci
+  <fct>                      <dbl>  <dbl> <int>    <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.00787 0.0695  6365 0.000871 0.00616   0.00957
+2 Naive/Mem T not ref-like 0.00121 0.0170 11817 0.000157 0.000907  0.00152
+3 Tc/NK ref-like           0.239   0.269   5521 0.00362  0.232     0.246  
+4 Tc/NK not ref-like       0.0683  0.166   7839 0.00188  0.0646    0.0720 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 37930765, p-value = 5.611e-09
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 29383529, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

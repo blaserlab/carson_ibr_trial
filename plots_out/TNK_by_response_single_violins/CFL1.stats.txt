@@ -1,0 +1,23 @@
+Stat report for CFL1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.304 0.263 11690 0.00243    0.299    0.308
+2 Naive/MemT_responder     0.349 0.287  6492 0.00357    0.342    0.356
+3 Tc/NK_non-responder      0.594 0.345  5407 0.00469    0.585    0.604
+4 Tc/NK_responder          0.562 0.318  7953 0.00356    0.555    0.569
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 41559832, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 20370696, p-value = 2.295e-07
+alternative hypothesis: true location shift is not equal to 0
+

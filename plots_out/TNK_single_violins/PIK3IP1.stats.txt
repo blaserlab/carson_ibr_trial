@@ -1,0 +1,23 @@
+Stat report for PIK3IP1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.300 0.328  6365 0.00412    0.292    0.308
+2 Naive/Mem T not ref-like 0.286 0.224 11817 0.00206    0.282    0.290
+3 Tc/NK ref-like           0.127 0.177  5521 0.00239    0.122    0.131
+4 Tc/NK not ref-like       0.199 0.234  7839 0.00264    0.194    0.204
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 36328394, p-value = 0.0001148
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 18152242, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

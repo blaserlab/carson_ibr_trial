@@ -1,0 +1,23 @@
+Stat report for HSP90AB1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.356 0.356  6365 0.00447    0.347    0.365
+2 Naive/Mem T not ref-like 0.442 0.251 11817 0.00231    0.437    0.446
+3 Tc/NK ref-like           0.321 0.250  5521 0.00337    0.314    0.328
+4 Tc/NK not ref-like       0.301 0.279  7839 0.00315    0.295    0.307
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 31331216, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 22618799, p-value = 5.218e-06
+alternative hypothesis: true location shift is not equal to 0
+

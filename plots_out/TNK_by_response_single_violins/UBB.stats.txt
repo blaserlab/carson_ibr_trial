@@ -1,0 +1,23 @@
+Stat report for UBB 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.232 0.228 11690 0.00211    0.228    0.236
+2 Naive/MemT_responder     0.239 0.228  6492 0.00283    0.233    0.244
+3 Tc/NK_non-responder      0.475 0.271  5407 0.00369    0.468    0.483
+4 Tc/NK_responder          0.478 0.261  7953 0.00292    0.472    0.484
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 38569702, p-value = 0.05723
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21503002, p-value = 0.9925
+alternative hypothesis: true location shift is not equal to 0
+

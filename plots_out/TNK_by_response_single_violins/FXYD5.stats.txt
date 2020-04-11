@@ -1,0 +1,23 @@
+Stat report for FXYD5 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.590 0.303 11690 0.00280    0.584    0.595
+2 Naive/MemT_responder     0.602 0.300  6492 0.00372    0.595    0.610
+3 Tc/NK_non-responder      0.382 0.264  5407 0.00360    0.375    0.389
+4 Tc/NK_responder          0.445 0.260  7953 0.00292    0.439    0.451
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 38859172, p-value = 0.006971
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 24469894, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,14 @@
+Stat report for CD74 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7   1.01 0.487  1634 0.0120     0.982     1.03
+2 1_plus1    1.16 0.416  2473 0.00836    1.14      1.17
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1613570, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

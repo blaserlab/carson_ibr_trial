@@ -1,0 +1,23 @@
+Stat report for HCST 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.199 0.226 11690 0.00209    0.195    0.203
+2 Naive/MemT_responder     0.191 0.218  6492 0.00270    0.186    0.197
+3 Tc/NK_non-responder      0.477 0.309  5407 0.00420    0.469    0.485
+4 Tc/NK_responder          0.431 0.291  7953 0.00326    0.424    0.437
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 37466561, p-value = 0.1342
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 19711136, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

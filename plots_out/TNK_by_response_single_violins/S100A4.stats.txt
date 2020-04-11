@@ -1,0 +1,23 @@
+Stat report for S100A4 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.402 0.353 11690 0.00327    0.396    0.409
+2 Naive/MemT_responder     0.563 0.411  6492 0.00510    0.553    0.573
+3 Tc/NK_non-responder      0.662 0.365  5407 0.00496    0.652    0.672
+4 Tc/NK_responder          0.653 0.353  7953 0.00396    0.646    0.661
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 46754844, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21274154, p-value = 0.2994
+alternative hypothesis: true location shift is not equal to 0
+

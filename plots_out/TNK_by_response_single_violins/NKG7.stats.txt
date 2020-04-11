@@ -1,0 +1,23 @@
+Stat report for NKG7 
+
+# A tibble: 4 x 7
+  pa_response_trinary        mean    sd count      se lower.ci upper.ci
+  <fct>                     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.0745 0.218 11690 0.00201   0.0706   0.0785
+2 Naive/MemT_responder     0.104  0.258  6492 0.00320   0.0978   0.110 
+3 Tc/NK_non-responder      1.17   0.329  5407 0.00448   1.16     1.18  
+4 Tc/NK_responder          1.07   0.338  7953 0.00379   1.07     1.08  
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 39628968, p-value = 3.813e-14
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 17413486, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

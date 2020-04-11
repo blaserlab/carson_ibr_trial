@@ -1,0 +1,23 @@
+Stat report for B2M 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like      1.29 0.504  6365 0.00632     1.28     1.30
+2 Naive/Mem T not ref-like  1.48 0.191 11817 0.00175     1.48     1.49
+3 Tc/NK ref-like            1.77 0.145  5521 0.00196     1.77     1.78
+4 Tc/NK not ref-like        1.59 0.183  7839 0.00207     1.59     1.60
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 32297113, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 34220560, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

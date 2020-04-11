@@ -1,0 +1,23 @@
+Stat report for ITGB2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.136 0.207 11690 0.00192    0.133    0.140
+2 Naive/MemT_responder     0.194 0.229  6492 0.00284    0.188    0.200
+3 Tc/NK_non-responder      0.520 0.317  5407 0.00431    0.512    0.528
+4 Tc/NK_responder          0.505 0.301  7953 0.00337    0.499    0.512
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 43639850, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 20853764, p-value = 0.003027
+alternative hypothesis: true location shift is not equal to 0
+

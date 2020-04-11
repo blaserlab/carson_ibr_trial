@@ -1,0 +1,14 @@
+Stat report for S100A11 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.726 0.324  1634 0.00802    0.710    0.742
+2 1_plus1   0.760 0.275  2473 0.00553    0.749    0.770
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1958369, p-value = 0.09507
+alternative hypothesis: true location shift is not equal to 0
+

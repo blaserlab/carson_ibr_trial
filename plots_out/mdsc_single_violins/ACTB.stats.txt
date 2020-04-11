@@ -1,0 +1,14 @@
+Stat report for ACTB 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7   1.41 0.383  1634 0.00947     1.40     1.43
+2 1_plus1    1.51 0.271  2473 0.00544     1.50     1.52
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1672730, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

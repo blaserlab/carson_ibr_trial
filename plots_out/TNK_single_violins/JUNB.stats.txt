@@ -1,0 +1,23 @@
+Stat report for JUNB 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.634 0.468  6365 0.00586    0.622    0.645
+2 Naive/Mem T not ref-like 0.769 0.339 11817 0.00312    0.763    0.775
+3 Tc/NK ref-like           0.623 0.336  5521 0.00452    0.614    0.632
+4 Tc/NK not ref-like       0.465 0.325  7839 0.00367    0.458    0.472
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 32365976, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 27367416, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

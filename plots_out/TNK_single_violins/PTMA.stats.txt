@@ -1,0 +1,23 @@
+Stat report for PTMA 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.776 0.415  6365 0.00521    0.766    0.786
+2 Naive/Mem T not ref-like 0.988 0.193 11817 0.00177    0.984    0.991
+3 Tc/NK ref-like           0.988 0.196  5521 0.00264    0.983    0.994
+4 Tc/NK not ref-like       1.18  0.229  7839 0.00258    1.17     1.18 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 26900872, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 9985400, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

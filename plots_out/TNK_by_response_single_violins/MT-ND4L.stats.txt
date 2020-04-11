@@ -1,0 +1,23 @@
+Stat report for MT-ND4L 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 1.06  0.317 11690 0.00293    1.05     1.06 
+2 Naive/MemT_responder     1.09  0.330  6492 0.00410    1.08     1.10 
+3 Tc/NK_non-responder      0.930 0.248  5407 0.00338    0.924    0.937
+4 Tc/NK_responder          1.03  0.246  7953 0.00276    1.03     1.04 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 40157978, p-value = 6.86e-11
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 26802467, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

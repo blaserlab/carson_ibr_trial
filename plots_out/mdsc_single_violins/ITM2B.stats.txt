@@ -1,0 +1,14 @@
+Stat report for ITM2B 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.517 0.306  1634 0.00756    0.502    0.532
+2 1_plus1   0.610 0.267  2473 0.00536    0.600    0.621
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1643380, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

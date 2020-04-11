@@ -1,0 +1,23 @@
+Stat report for HNRNPA1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.452 0.349  6365 0.00437    0.444    0.461
+2 Naive/Mem T not ref-like 0.694 0.217 11817 0.00199    0.691    0.698
+3 Tc/NK ref-like           0.597 0.233  5521 0.00313    0.591    0.603
+4 Tc/NK not ref-like       0.647 0.258  7839 0.00292    0.642    0.653
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 22443493, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 18190359, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

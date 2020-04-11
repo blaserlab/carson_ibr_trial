@@ -1,0 +1,23 @@
+Stat report for ZFP36L2 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.699 0.442  6365 0.00554    0.688    0.710
+2 Naive/Mem T not ref-like 0.855 0.323 11817 0.00297    0.849    0.860
+3 Tc/NK ref-like           0.658 0.302  5521 0.00407    0.650    0.666
+4 Tc/NK not ref-like       0.572 0.334  7839 0.00378    0.565    0.580
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 30030541, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 25014650, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

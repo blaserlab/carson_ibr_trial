@@ -1,0 +1,14 @@
+Stat report for LGALS1 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.556 0.334  1634 0.00827    0.540    0.572
+2 1_plus1   0.648 0.312  2473 0.00627    0.636    0.661
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1706878, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

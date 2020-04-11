@@ -1,0 +1,23 @@
+Stat report for PPP1CA 
+
+# A tibble: 4 x 7
+  recluster                  mean    sd count      se lower.ci upper.ci
+  <fct>                     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.0730 0.155  6365 0.00194   0.0692   0.0768
+2 Naive/Mem T not ref-like 0.0509 0.110 11817 0.00102   0.0489   0.0529
+3 Tc/NK ref-like           0.279  0.232  5521 0.00312   0.273    0.286 
+4 Tc/NK not ref-like       0.0999 0.169  7839 0.00191   0.0962   0.104 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 38768028, p-value = 1.367e-06
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 30955906, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

@@ -1,0 +1,23 @@
+Stat report for DUSP2 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.202 0.265 11690 0.00245    0.197    0.207
+2 Naive/MemT_responder     0.196 0.262  6492 0.00325    0.190    0.203
+3 Tc/NK_non-responder      0.332 0.336  5407 0.00457    0.323    0.341
+4 Tc/NK_responder          0.434 0.343  7953 0.00385    0.426    0.441
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 37558079, p-value = 0.2157
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 25171755, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

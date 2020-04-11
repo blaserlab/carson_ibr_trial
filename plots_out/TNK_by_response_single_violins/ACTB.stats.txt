@@ -1,0 +1,23 @@
+Stat report for ACTB 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.813 0.371 11690 0.00343    0.807    0.820
+2 Naive/MemT_responder     0.811 0.381  6492 0.00473    0.802    0.821
+3 Tc/NK_non-responder      1.19  0.353  5407 0.00480    1.19     1.20 
+4 Tc/NK_responder          1.05  0.338  7953 0.00379    1.05     1.06 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 37522878, p-value = 0.2121
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 16705836, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

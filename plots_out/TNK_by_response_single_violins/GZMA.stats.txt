@@ -1,0 +1,23 @@
+Stat report for GZMA 
+
+# A tibble: 4 x 7
+  pa_response_trinary        mean     sd count       se lower.ci upper.ci
+  <fct>                     <dbl>  <dbl> <int>    <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.0195 0.0968 11690 0.000895   0.0178   0.0213
+2 Naive/MemT_responder     0.0307 0.122   6492 0.00152    0.0277   0.0336
+3 Tc/NK_non-responder      0.372  0.349   5407 0.00474    0.362    0.381 
+4 Tc/NK_responder          0.312  0.297   7953 0.00333    0.306    0.319 
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 38921808, p-value = 1.945e-12
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 19649138, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

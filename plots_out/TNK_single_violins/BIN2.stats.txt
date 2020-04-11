@@ -1,0 +1,23 @@
+Stat report for BIN2 
+
+# A tibble: 4 x 7
+  recluster                  mean    sd count      se lower.ci upper.ci
+  <fct>                     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.0959 0.183  6365 0.00230   0.0914   0.100 
+2 Naive/Mem T not ref-like 0.0724 0.132 11817 0.00121   0.0700   0.0748
+3 Tc/NK ref-like           0.303  0.235  5521 0.00316   0.297    0.309 
+4 Tc/NK not ref-like       0.0945 0.171  7839 0.00193   0.0907   0.0983
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 38208602, p-value = 0.02259
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 32200485, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

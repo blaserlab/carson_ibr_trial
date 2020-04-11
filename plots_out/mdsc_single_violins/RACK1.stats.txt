@@ -1,0 +1,14 @@
+Stat report for RACK1 
+
+# A tibble: 2 x 7
+  cycle_day  mean    sd count      se lower.ci upper.ci
+  <fct>     <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 1_minus7  0.701 0.324  1634 0.00800    0.686    0.717
+2 1_plus1   0.761 0.273  2473 0.00548    0.751    0.772
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  mdsc_one_minus_seven and mdsc_one_plus_one
+W = 1833005, p-value = 4.608e-07
+alternative hypothesis: true location shift is not equal to 0
+

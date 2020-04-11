@@ -1,0 +1,23 @@
+Stat report for RACK1 
+
+# A tibble: 4 x 7
+  recluster                 mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/Mem T ref-like     0.559 0.441  6365 0.00553    0.548    0.570
+2 Naive/Mem T not ref-like 0.974 0.194 11817 0.00178    0.971    0.978
+3 Tc/NK ref-like           0.789 0.213  5521 0.00286    0.784    0.795
+4 Tc/NK not ref-like       0.724 0.290  7839 0.00327    0.718    0.731
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_reflike and NMT_notreflike
+W = 16147114, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_reflike and TCNK_notreflike
+W = 23692910, p-value < 2.2e-16
+alternative hypothesis: true location shift is not equal to 0
+

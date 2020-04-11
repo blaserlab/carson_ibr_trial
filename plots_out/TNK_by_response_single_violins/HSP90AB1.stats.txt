@@ -1,0 +1,23 @@
+Stat report for HSP90AB1 
+
+# A tibble: 4 x 7
+  pa_response_trinary       mean    sd count      se lower.ci upper.ci
+  <fct>                    <dbl> <dbl> <int>   <dbl>    <dbl>    <dbl>
+1 Naive/MemT_non-responder 0.412 0.297 11690 0.00275    0.407    0.418
+2 Naive/MemT_responder     0.411 0.291  6492 0.00361    0.404    0.418
+3 Tc/NK_non-responder      0.304 0.268  5407 0.00364    0.296    0.311
+4 Tc/NK_responder          0.313 0.267  7953 0.00299    0.307    0.319
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  NMT_responder and NMT_nonresponder
+W = 37842390, p-value = 0.7589
+alternative hypothesis: true location shift is not equal to 0
+
+
+	Wilcoxon rank sum test with continuity correction
+
+data:  TCNK_responder and TCNK_nonresponder
+W = 21870917, p-value = 0.0842
+alternative hypothesis: true location shift is not equal to 0
+
