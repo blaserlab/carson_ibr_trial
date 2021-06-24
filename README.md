@@ -1,14 +1,16 @@
-# Carson Lab Ibrutinib Clincal Trial
+# Single Cell RNA Seq Data Analysis For: A pilot study of the Bruton's tyrosine kinase inhibitor ibrutinib in combination with nivolumab in patients with metastatic solid tumors
 
-* This is the analysis repository for the Carson Lab Ibrutinib Clinical Trial single cell RNA seq data.
+* The source data for this analysis will be available at the time of publication as a pre-compiled R package at this DOI:  doi:10.5061/dryad.1c59zw3vs
 
-* The source data for this repository is available as a pre-compiled binary file at this url:  https://XXX
+* Prior to publication, peer reviewers may access the data via the private URL provided in the manuscript.
 
-* The best plan is to download and install interactively via the RStudio packages tab.  The data repository requries the package "lazyData" as a dependencey. This allows pseudo-lazy loading for packages that exceed the builtin file size limits in R.  Lazy-load the data into your analysis R session with: 
+* The best plan is to clone the analysis project and then download the data package and install interactively via the RStudio packages tab.  This should install the package "lazyData" as a dependency. This allows pseudo-lazy loading for packages that exceed the built-in file size limits in R.  Within the analysis project run: 
 
 ```r
-library(lazyData)
-requireData("carson.ibr.trial.datapkg")
+lazyData::requireData("carson.ibr.trial.datapkg")
 ```
 
+* The data objects should be available within a hidden environment and will occupy memory only when called by the analysis code.
+
+* Data pre-processing scripts are available in the data-raw directory of the data package.
 
