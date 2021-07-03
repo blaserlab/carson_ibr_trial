@@ -10,7 +10,7 @@ tcell_partition_plot <-
   ggplot(mapping = aes(x = partition_assignment_1, y = log2fold_change_over_baseline, fill = enriched)) +
   geom_hline(yintercept = 0, linetype = "dashed", color = "grey80") +
   geom_bar(stat = "identity", color = "black") +
-  scale_fill_manual(values = experimental_group_palette, guide = guide_legend(title.position = "top")) +
+  scale_fill_manual(values = experimental_group_palette, guide = guide_legend(title.position = "top"), breaks = c("C1D-7", "C1D+1")) +
   labs(y = "log2(C1D+1/C1D-7)", x = NULL, fill = "Enriched") +
   geom_text(mapping = aes(y = texty, label = p.signif), nudge_y = 0.1, size = 3, show.legend = F) +
   theme(legend.position = "top") +
@@ -18,7 +18,7 @@ tcell_partition_plot <-
 
 
 
-# cancer-associated TCRs  
+# cancer-associated TCRs---------------------------------  
 
 cancer_tcr_plot <-
   ggplot(cancer_tcr_by_pt,
@@ -58,12 +58,6 @@ tcells_only_density <-
   theme(legend.position = "right")
 
 
-tcell_subset_gene_umap <-
-  bb_gene_umap(cds_aligned[, colData(cds_aligned)$partition_assignment %in% c("T1", "T2")],
-               gene_or_genes = c("PYCARD", "GSDMD", "CARD17", "CASP6"),
-               alpha = 0.6,
-               color_legend_title = "Expression") + 
-  theme(panel.background = element_rect(color = "grey80"))
 
 tcr_cancer_umap <-
   bb_var_umap(

@@ -13,7 +13,8 @@ library("fastSave")
 library("lazyData")
 
 # run this to update the data package in renv 
-# renv::install("~/R/x86_64-pc-linux-gnu-library/4.1/carson.ibr.trial.datapkg")
+# bb_renv_datapkg("~/network/X/Labs/Carson/ibr_trial_sc_data/datapkg")
+
 
 # load the data set into a hidden environment
 requireData("carson.ibr.trial.datapkg")

@@ -29,11 +29,12 @@ fig_7_mid <- plot_grid(
 )
 
 fig_7_bot <- plot_grid(
-  fig_7_left[[3]],
+  # fig_7_left[[3]],
+  NULL,
   NULL,
   ncol = 2,
   rel_widths = c(3.45,1),
-  labels = c("E","")
+  labels = c("","")
 )
 
 fig_7 <- plot_grid(
