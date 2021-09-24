@@ -14,7 +14,8 @@ library("lazyData")
 
 # run this to update the data package in renv 
 # bb_renv_datapkg("~/network/X/Labs/Carson/ibr_trial_sc_data/datapkg")
-
+# session <- sessionInfo()
+# session$otherPkgs$carson.ibr.trial.datapkg$Version
 
 # load the data set into a hidden environment
 requireData("carson.ibr.trial.datapkg")
